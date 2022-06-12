@@ -11,5 +11,5 @@ public class SendCurrencyResult implements Result {
     private final long userId;
     private final String username;
     private final ZonedDateTime sendAt;
-    private final long amount;
+    private final double amount;
 }

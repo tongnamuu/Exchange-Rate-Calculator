@@ -8,8 +8,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.Getter;
 
 @Entity
+@Getter
 public class Remittance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +21,7 @@ public class Remittance {
     private Long userId;
 
     @Column(name = "amount", nullable = false)
-    private Long amount;
+    private Double amount;
 
     @Column(name = "currency", nullable = false)
     @Enumerated(value = EnumType.STRING)
